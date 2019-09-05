@@ -10,6 +10,13 @@ import java.io.IOException;
  * @Author zhanghe
  * @Desc: 根据想要的结果的kv类型 手机号 流量总和(上行+下行) 自定义类
  * @Date 2019/2/13 23:37
+ *
+ * keyIN:LongWritable(long)  数据的起始偏移量
+ * valueIN:具体数据 Text
+ *
+ * keyOut：手机号 Text
+ * valueOut：FlowBean
+ *
  */
 public class FlowCountMapper extends Mapper<LongWritable, Text, Text, FlowBean> {
 

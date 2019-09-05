@@ -39,8 +39,13 @@
 	<!-- zookeeper集群的位置 -->
 	<property>
 		<name>hbase.zookeeper.quorum</name>
-		<value>hd101:2181,hd102:2181,hd103:2181</value>
+		<value>hd101,hd102,hd103</value>
 	</property>
+	<property>
+		<name>hbase.zookeeper.property.clientPort</name>
+		<value>2181</value>
+	</property>
+
 	<!-- hbase的元数据信息存储在zookeeper的位置 -->
 	<property>
 		<name>hbase.zookeeper.property.dataDir</name>

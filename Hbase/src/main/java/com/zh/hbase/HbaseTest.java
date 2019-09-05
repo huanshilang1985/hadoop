@@ -151,10 +151,11 @@ public class HbaseTest {
         admin.deleteTable(TableName.valueOf(tableName));
     }
 
-    public static void main(String[] args) throws IOException {
-//        System.out.println(isExist("userinfo"));
+    public static void main(String[] args)  {
+        try {
+            System.out.println(isExist("userinfo"));
 
-        //create '表名','列族名'...
+            //create '表名','列族名'...
 //        createTable("member","info1","info2","info3");
 
 //        addData("member","beijing101","info1","name","mimi");
@@ -162,7 +163,7 @@ public class HbaseTest {
 //        addData("member","beijing102","info1","name","wangwang");
 //        addData("member","beijing102","info1","age","19");
 //        addData("member","beijing102","info2","wight","19");
-        //addData("reba","beijing102","info1","name","mimi");
+            //addData("reba","beijing102","info1","name","mimi");
 
 //        scanAll("member");
 
@@ -170,7 +171,12 @@ public class HbaseTest {
 
 //        deleteMore("member","beijing101","beijing102");
 
-        deleteTable("member");
+//        deleteTable("member");
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+
     }
 
 }

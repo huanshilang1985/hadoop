@@ -30,7 +30,7 @@ public class WordCountDirver2 {
         job.setJarByClass(WordCountDirver2.class);     //2. 指定jar包位置
         job.setMapperClass(WordCountMapper.class);    //3. 关联使用的Mapper类
         job.setReducerClass(WordCountReducer.class);  //4. 关联使用的Reducer类
-        job.setCombinerClass(WordCountReducer.class);  //指定combiner（局部聚合，一般业余与Reducer一致）
+        job.setCombinerClass(WordCountCombiner.class);  //指定combiner（局部聚合，一般业余与Reducer一致）
         job.setMapOutputKeyClass(Text.class);         //5.设置mapper阶段输出的数据类型
         job.setMapOutputValueClass(IntWritable.class);
         job.setOutputKeyClass(Text.class);            //6.设置reducer阶段输出的数据类

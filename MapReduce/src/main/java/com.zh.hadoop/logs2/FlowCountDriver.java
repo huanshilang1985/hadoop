@@ -30,7 +30,7 @@ public class FlowCountDriver {
 
         //加入自定义分区
         job.setPartitionerClass(PhonenumPartitioner.class);
-        //注意：结果文件几个？ 分区个数+1个。用户保存未分区的数据
+        //注意：结果文件几个？ 分区个数+1个。用于保存未分区的数据
         job.setNumReduceTasks(5);
 
         //7. 设置数据输入的路径，默认TextInputFormat
